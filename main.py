@@ -3,15 +3,17 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 import zipfile
+from dotenv import load_dotenv
 import time
 import os
 import random
 
+load_dotenv()
+PROXY_HOST = os.getenv('PROXY_HOST')
+PROXY_PORT = os.getenv('PROXY_PORT')
+PROXY_USER = os.getenv('PROXY_USER')
+PROXY_PASS = os.getenv('PROXY_PASS')
 
-PROXY_HOST = '52.87.222.91'  # rotating proxy or host
-PROXY_PORT = '80' # port
-PROXY_USER = 'geic' # username
-PROXY_PASS = 'geic' # password
 
 manifest_json = """
 {

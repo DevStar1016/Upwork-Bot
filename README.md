@@ -10,6 +10,8 @@ python -m venv myvenv
 
 pip install webdriver_manager selenium
 
+Change proxy info in .env file
+
 # Run the app
 
 python main.py
